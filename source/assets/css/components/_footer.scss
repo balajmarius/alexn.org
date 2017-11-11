@@ -1,0 +1,25 @@
+.footer {
+  font-size: $font-size-small;
+  background: $white-base;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  border-top: 3px dashed $gray-lighter;
+  border-bottom: 3px dashed $gray-lighter;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $paragraph-color;
+  
+  p {
+    line-height: 1;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+}

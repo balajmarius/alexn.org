@@ -53,58 +53,49 @@
     <meta name="twitter:image" content="<%= website.root_url %><%= current_page.data.image || '/assets/img/logo.png' %>" />
   <% end %>
 
-  <%= stylesheet_link_tag "fonts" %>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <%= stylesheet_link_tag "all" %>
-  <!--[if lt IE 9]>
-  <%= stylesheet_link_tag "ie-hacks" %>
-  <![endif]-->
 
   <!-- Google authorship -->
   <link href="https://plus.google.com/+alexelcu" rel="publisher">
 </head>
 <body>
-  <div id="header-container">
-    <header>
-      <h1 id="title"><%= website.title %></h1>
-
+  <div class="container">
+    <header class="header">          
       <meta itemprop="lastReviewed" content="<%= Time.now.strftime('%Y-%m-%d') %>"/>
       <div itemprop="reviewedBy" itemscope itemtype="https://schema.org/Person">
         <meta itemprop="name" content="Alexandru Nedelcu">
         <meta itemprop="url" content="https://plus.google.com/+alexelcu">
       </div>
 
-      <div class="github-fork-ribbon-wrapper right">
-        <div class="github-fork-ribbon">
-          <a href="https://github.com/alexandru" itemprop="relatedLink">Fork me on GitHub</a>
-        </div>
-      </div>
+      <a href="https://github.com/alexandru" class="header__badge" target="_blank">
+        <img src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+      </a>
 
       <nav>
-    	  <a href="/"><%= website.title %></a>
-    	  <a class="extra" href="/about.html" itemprop="significantLink">About</a>
+        <h1 id="title" class="header__title">
+          <a href="/"><%= website.title %></a>
+        </h1>
+        
+        <a class="extra" href="/about.html" itemprop="significantLink">About</a>
       </nav>
     </header>
-  </div>
 
-  <div id="main-container">
-    <div id="main">
-      <%= yield %>
+    <div id="main-container" class="content">      
+      <%= yield %>      
     </div>
-  </div>
 
-  <div id="footer-container">
-    <footer>
-      <div class="contact">
-      	&copy; <%= DateTime.now.strftime("%Y") %> Alexandru Nedelcu
-      	<br>
-      	Some rights reserved (<a href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license">CC BY-NC 3.0</a>)
+    <footer class="footer">
+      <div>
+        <p>&copy; <%= DateTime.now.strftime("%Y") %> Alexandru Nedelcu</p>
+        <p>Some rights reserved (<a href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license">CC BY-NC 3.0</a>)</p>
       </div>
 
-      <div class="rss">
-      	<a href="https://twitter.com/alexelcu" target="_blank" title="Follow me on Twitter (@alexelcu)">
-      	  <%= image_tag "twitter-logo.png", :width => 60, :height => 60,
+      <div>
+        <a href="https://twitter.com/alexelcu" target="_blank" title="Follow me on Twitter (@alexelcu)">
+          <%= image_tag "twitter-logo.png", :width => 60, :height => 60,
               :alt => "Follow me on Twitter (@alexelcu)" %>
-      	</a>
+        </a>
       </div>
     </footer>
   </div>

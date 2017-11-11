@@ -1,0 +1,41 @@
+.header {
+  background: $black-base;
+  font-size: $font-size-medium;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+
+  a {
+    color: $gray-base;
+    text-transform: lowercase;
+    font-weight: bold;
+
+    &:hover {
+      color: $white-base;
+    }
+  }
+
+  nav {
+    display: flex;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__title {
+    margin-right: 20px;
+
+    a {
+      color: $red-lighter;
+
+      &:hover {
+        color: $red-lighter;
+      }
+    }
+  }
+}

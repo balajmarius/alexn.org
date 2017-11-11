@@ -1,4 +1,16 @@
-@import "syntax";
-@import "github";
-@import "styles";
-@import "small";
+// constants
+@import 'config';
+
+// base 
+@import 'reset';
+@import 'utils';
+@import 'base';
+
+// components
+@import 'components/header';
+@import 'components/content';
+@import 'components/posts';
+@import 'components/footer';
+
+// pages
+@import 'pages/home';
